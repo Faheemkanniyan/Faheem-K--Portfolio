@@ -2,405 +2,2180 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Faheem K - Aspiring Software Developer | MCA Student | IT Enthusiast. Portfolio showcasing education, skills, and projects.">
-    <meta name="keywords" content="Faheem K, Software Developer, MCA Student, IT Portfolio, Web Developer">
-    <meta name="author" content="Faheem K">
-    <title>Faheem K - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="kyPFTgz4yX4aBjZzY0l7UE4gi15bpOmuJ5v1JEtdxRY" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faheem K | Software Engineer</title>
+  <meta
+  name="description"
+  content="Faheem K is a Software Engineer and MCA graduate from Kerala, India, specializing in Python, SQL, Tableau, Excel, data visualization and machine learning."
+>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a192f'/%3E%3Ctext x='50' y='65' font-family='Arial, sans-serif' font-size='45' font-weight='bold' fill='%2364ffda' text-anchor='middle'%3EFK%3C/text%3E%3C/svg%3E">
+<link
+  rel="canonical"
+  href="https://mohammedaneeshportfolio.netlify.app/"
+>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+<meta name="robots" content="index, follow">
 
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Faheem K | Software Engineer">
+<meta
+  property="og:description"
+  content="Portfolio of Faheem K — Software Engineer specializing in Python, SQL, Tableau, Excel and data analytics."
+>
+<meta
+  property="og:url"
+  content="https://mohammedaneeshportfolio.netlify.app/"
+>
+<meta property="og:site_name" content="Faheem K">
+
+<meta name="author" content="Faheem K">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Faheem K",
+  "url": "https://mohammedaneeshportfolio.netlify.app/",
+  "jobTitle": "Software Engineer",
+  "sameAs": [
+    "https://www.linkedin.com/in/faheem-k26/",
+    "https://github.com/Faheemkanniyan"
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = savedTheme || systemTheme;
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #F1F3F6;
+      --panel: #FFFFFF;
+      --ink: #16233D;
+      --muted: #5B6B85;
+      --teal: #0E7C86;
+      --amber: #E2A33D;
+      --grid: #D7DCE4;
+      --code-bg: #0F1B2D;
+      --code-text: #DCE6F0;
+      --code-muted: #7C93B3;
+      --surface-subtle: #F7F9FB;
+      --accent-soft: #EAF3F3;
+      --accent-soft-strong: #d4ecec;
+      --accent-border: #c0dfe0;
+      --code-chrome: #0A1523;
+      --code-border: #1D2F47;
+      --code-row: #16233A;
+      --radius: 10px;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #09111F;
+      --panel: #101B2C;
+      --ink: #E7EEF7;
+      --muted: #9AAAC0;
+      --teal: #5FC7CE;
+      --amber: #E2A33D;
+      --grid: #24344C;
+      --code-bg: #07101D;
+      --code-text: #E5EEF8;
+      --code-muted: #91A5C0;
+      --surface-subtle: #132236;
+      --accent-soft: #102F37;
+      --accent-soft-strong: #153C42;
+      --accent-border: #2F636A;
+      --code-chrome: #050C17;
+      --code-border: #203552;
+      --code-row: #172940;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color .2s ease, color .2s ease;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.01em;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* subtle grid texture on page background */
+    body {
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 48px 48px;
+      background-position: -1px -1px;
+      background-attachment: fixed;
+    }
+
+    /* ---------- Layout shell ---------- */
+    .shell {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      max-width: 1180px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+
+    /* ---------- Schema explorer sidebar ---------- */
+    .explorer {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 28px 18px;
+      border-right: 1px solid var(--grid);
+      background: var(--panel);
+    }
+
+    .explorer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .explorer-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .explorer-title::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    .db-tree {
+      list-style: none;
+    }
+
+    .db-tree li {
+      margin-bottom: 2px;
+    }
+
+    .db-tree a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--muted);
+      transition: background .15s ease, border-color .15s ease, color .15s ease;
+    }
+
+    .db-tree a:hover,
+    .db-tree a.active {
+      background: var(--accent-soft);
+      color: var(--teal);
+    }
+
+    .db-tree .tbl-icon {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid currentColor;
+      border-radius: 2px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .db-tree .tbl-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 33%;
+      height: 1.5px;
+      background: currentColor;
+    }
+
+    .explorer-foot {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--grid);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .theme-toggle {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: color .15s ease, background .15s ease;
+    }
+
+    .theme-toggle:hover {
+      color: var(--teal);
+      background: var(--accent-soft);
+    }
+
+    .theme-toggle svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .theme-toggle .icon-sun,
+    .theme-toggle .icon-moon {
+      display: none;
+    }
+
+    [data-theme="light"] .theme-toggle .icon-moon {
+      display: block;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-sun {
+      display: block;
+    }
+
+    /* ---------- Main content ---------- */
+    main {
+      padding: 0 0 40px 0;
+    }
+
+    section {
+      padding: 64px 40px;
+      scroll-margin-top: 24px;
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .eyebrow::before {
+      content: "//";
+      color: var(--amber);
+    }
+
+    h2.section-title {
+      font-size: clamp(22px, 3vw, 30px);
+      margin-bottom: 28px;
+    }
+
+    /* ---------- Hero / terminal ---------- */
+    .hero {
+      padding-top: 56px;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      text-align: center;
+      min-width: 0;
+    }
+
+    .hero-text {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .hero-image-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-summary {
+      display: grid;
+      gap: 8px;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .hero-summary h1 {
+      font-size: clamp(36px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-summary-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .hero-summary-tools,
+    .hero-summary-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .hero-summary-status {
+      color: var(--teal);
+      font-weight: 600;
+    }
+
+    .hero-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      padding: 8px;
+      background-color: var(--panel);
+      border: 4px solid var(--panel);
+      box-shadow: 0 12px 36px -12px rgba(15, 27, 45, 0.3),
+        0 0 0 6px rgba(14, 124, 134, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-photo:hover {
+      transform: scale(1.04);
+      box-shadow: 0 20px 48px -16px rgba(15, 27, 45, 0.4),
+        0 0 0 8px rgba(14, 124, 134, 0.2);
+    }
+
+    .hero-links {
+      justify-content: center;
+    }
+
+    .terminal {
+      background: var(--code-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 20px 50px -20px rgba(15, 27, 45, 0.45);
+      margin-top: 20px;
+    }
+
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: var(--code-chrome);
+      border-bottom: 1px solid var(--code-border);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #2A3C56;
+    }
+
+    .terminal-title {
+      margin-left: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--code-muted);
+    }
+
+    .terminal-body {
+      padding: 26px 24px 30px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--code-text);
+    }
+
+    .query-line {
+      white-space: pre-wrap;
+      min-height: 1.6em;
+    }
+
+    .kw {
+      color: #5FC7CE;
+    }
+
+    .str {
+      color: #E2A33D;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 16px;
+      background: var(--amber);
+      vertical-align: -3px;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .result-wrap {
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .result-wrap.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .result-meta {
+      color: var(--code-muted);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .result-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .result-table th {
+      text-align: left;
+      color: var(--code-muted);
+      font-weight: 500;
+      padding: 6px 14px 6px 0;
+      border-bottom: 1px solid var(--code-border);
+    }
+
+    .result-table td {
+      padding: 10px 14px 10px 0;
+      border-bottom: 1px solid var(--code-row);
+      color: var(--code-text);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #7FE3B4;
+    }
+
+    .status-pill::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #3FE0A0;
+      box-shadow: 0 0 0 3px rgba(63, 224, 160, 0.18);
+    }
+
+    .hero-links {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      padding: 8px 14px;
+      border: 1px solid var(--grid);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--ink);
+      transition: border-color .15s ease, color .15s ease;
+    }
+
+    .pill-link:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .btn-contact-hero {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      padding: 8px 18px;
+      border: 1.5px solid var(--teal);
+      border-radius: 999px;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .18s ease, color .18s ease, transform .15s ease, box-shadow .18s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-contact-hero:hover {
+      background: #0A6870;
+      border-color: #0A6870;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(14, 124, 134, 0.35);
+    }
+
+    .btn-contact-hero:active {
+      transform: translateY(0);
+    }
+
+
+    @keyframes resume-pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(14, 124, 134, 0.45);
+      }
+
+      50% {
+        box-shadow: 0 0 0 10px rgba(14, 124, 134, 0);
+      }
+    }
+
+    .btn-resume {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: var(--teal);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s ease, transform .15s ease, box-shadow .2s ease;
+      animation: resume-pulse 2.4s ease-in-out infinite;
+    }
+
+    .btn-resume:hover {
+      background: #0A6870;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(14, 124, 134, 0.4);
+      animation: none;
+    }
+
+    .btn-resume:active {
+      transform: translateY(0);
+    }
+
+    .btn-resume .resume-icon {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    /* ---------- About ---------- */
+    .about-text {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    .about-text strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ---------- Skills ---------- */
+    .schema-block {
+      background: var(--panel);
+      border: 1px solid var(--grid);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .schema-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      background: var(--surface-subtle);
+      border-bottom: 1px solid var(--grid);
+    }
+
+    .schema-head .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .schema-head .count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 16px 18px;
+    }
+
+    .chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      padding: 6px 12px;
+      background: var(--accent-soft);
+      color: var(--teal);
+      border-radius: 6px;
+    }
+
+    /* ---------- Projects ---------- */
+    .project-card {
+      background: var(--panel);
+      border: 1px solid var(--grid);
+      border-radius: var(--radius);
+      margin-bottom: 22px;
+      overflow: hidden;
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 16px 34px -22px rgba(22, 35, 61, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .project-head {
+      padding: 16px 20px;
+      background: var(--surface-subtle);
+      border-bottom: 1px solid var(--grid);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .project-head h3 {
+      font-size: 17px;
+    }
+
+    .project-stack {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    .repo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+      padding: 5px 10px;
+      border: 1px solid var(--grid);
+      border-radius: 999px;
+      transition: border-color .15s ease, background .15s ease;
+      white-space: nowrap;
+    }
+
+    .repo-link:hover {
+      border-color: var(--teal);
+      background: var(--accent-soft);
+    }
+
+    .repo-link svg {
+      width: 13px;
+      height: 13px;
+      fill: currentColor;
+    }
+
+    .project-body {
+      padding: 18px 20px 20px;
+    }
+
+    .project-body ul {
+      list-style: none;
+    }
+
+    .project-body li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 9px;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .project-body li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+      font-weight: 700;
+    }
+
+    .project-skills {
+      padding: 10px 20px 16px;
+      border-top: 1px solid var(--grid);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .project-skills strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ---------- Certifications ---------- */
+    .cert-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--grid);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .cert-table th {
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      background: var(--surface-subtle);
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--grid);
+    }
+
+    .cert-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--grid);
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    .cert-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cert-table .cert-name {
+      font-weight: 600;
+    }
+
+    .cert-table .cert-issuer {
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-top: 2px;
+    }
+
+    .cert-tags {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      padding: 5px 11px;
+      border: 1px solid var(--grid);
+      border-radius: 999px;
+      color: var(--teal);
+      background: var(--accent-soft);
+      white-space: nowrap;
+      transition: border-color .15s ease, background .15s ease;
+    }
+
+    .cert-link:hover {
+      border-color: var(--teal);
+      background: var(--accent-soft-strong);
+    }
+
+
+
+    /* ---------- Experience ---------- */
+    .exp-card {
+      background: var(--panel);
+      border: 1px solid var(--grid);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+
+    .exp-card:hover {
+      box-shadow: 0 16px 34px -22px rgba(22, 35, 61, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .exp-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 18px 20px;
+      background: var(--surface-subtle);
+      border-bottom: 1px solid var(--grid);
+    }
+
+    .exp-head-left h3 {
+      font-size: 17px;
+      margin-bottom: 3px;
+    }
+
+    .exp-company {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .exp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--teal);
+      border: 1px solid var(--accent-border);
+      white-space: nowrap;
+    }
+
+    .exp-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+      display: inline-block;
+    }
+
+    .exp-body {
+      padding: 18px 20px 20px;
+    }
+
+    .exp-body ul {
+      list-style: none;
+    }
+
+    .exp-body li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 9px;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .exp-body li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .exp-footer {
+      padding: 10px 20px 16px;
+      border-top: 1px solid var(--grid);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .exp-footer strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ---------- Education timeline ---------- */
+    .timeline {
+      position: relative;
+      padding-left: 26px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      bottom: 6px;
+      width: 1.5px;
+      background: var(--grid);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 26px;
+    }
+
+    .tl-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: 4px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--panel);
+      border: 2px solid var(--teal);
+    }
+
+    .tl-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+      margin-bottom: 4px;
+    }
+
+    .tl-item h3 {
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+
+    .tl-item .tl-place {
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-panel {
+      background: var(--code-bg);
+      border-radius: var(--radius);
+      padding: 32px 30px;
+      color: var(--code-text);
+    }
+
+    .contact-panel .eyebrow {
+      color: #5FC7CE;
+    }
+
+    .contact-panel h2 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-panel p {
+      color: var(--code-muted);
+      max-width: 480px;
+      margin-bottom: 22px;
+      font-size: 14.5px;
+    }
+
+    .connect-list {
+      display: grid;
+      gap: 10px;
+      max-width: 420px;
+    }
+
+    .connect-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      padding: 12px 14px;
+      background: var(--code-chrome);
+      border: 1px solid var(--code-border);
+      border-radius: 8px;
+      transition: border-color .15s ease;
+    }
+
+    .connect-row:hover {
+      border-color: var(--teal);
+    }
+
+    .connect-row .k {
+      color: var(--code-muted);
+    }
+
+    .connect-row .v {
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 26px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    .footer-copy {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* reveal-on-scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 2px;
+    }
+
+    /* ==================================================
+       Responsive
+       Breakpoint-specific refinements are grouped here.
+       ================================================== */
+
+    /* 1440px: large laptop containment */
+    @media (max-width: 1440px) {
+      .shell {
+        max-width: 1180px;
+      }
+    }
+
+    /* 1024px: tablet keeps the two-column database explorer */
+    @media (max-width: 1024px) {
+      .shell {
+        grid-template-columns: 200px minmax(0, 1fr);
+      }
+
+      .explorer {
+        padding: 24px 14px;
+      }
+
+      .db-tree a {
+        font-size: 12.5px;
+        padding: 8px 9px;
+      }
+
+      section {
+        padding: 56px 32px;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero-content {
+        gap: 24px;
+      }
+
+      .hero-photo {
+        width: 160px;
+        height: 160px;
+      }
+
+      .terminal-body {
+        padding: 24px;
+        font-size: clamp(13px, 1.35vw, 14px);
+      }
+    }
+
+    /* 768px: mobile app shell with sticky horizontal navigation */
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+        background-size: 40px 40px;
+      }
+
+      .shell {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: none;
+      }
+
+      .explorer {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        column-gap: 12px;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        width: 100vw;
+        max-width: 100vw;
+        overflow: hidden;
+        height: auto;
+        padding: 12px 16px 10px;
+        border-right: none;
+        border-bottom: 1px solid var(--grid);
+        box-shadow: 0 10px 24px -22px rgba(15, 27, 45, 0.55);
+      }
+
+      .explorer-header {
+        grid-column: 1 / -1;
+        margin-bottom: 8px;
+      }
+
+      .explorer-title {
+        min-width: 0;
+        font-size: 10px;
+      }
+
+      .theme-toggle {
+        width: 40px;
+        height: 40px;
+      }
+
+      .db-tree {
+        grid-column: 1 / -1;
+        min-width: 0;
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-padding-inline: 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .db-tree::-webkit-scrollbar {
+        display: none;
+      }
+
+      .db-tree li {
+        flex: 0 0 auto;
+        margin-bottom: 0;
+        scroll-snap-align: start;
+      }
+
+      .db-tree a {
+        min-height: 40px;
+        padding: 9px 12px;
+        border: 1px solid transparent;
+        white-space: nowrap;
+      }
+
+      .db-tree a.active {
+        border-color: var(--accent-border);
+      }
+
+      .explorer-foot {
+        display: none;
+      }
+
+      main {
+        padding-bottom: 32px;
+      }
+
+      section {
+        padding: 48px 16px;
+        scroll-margin-top: 96px;
+      }
+
+      h2.section-title {
+        font-size: clamp(24px, 5vw, 30px);
+        margin-bottom: 24px;
+      }
+
+      .hero {
+        padding-top: 32px;
+        padding-bottom: 40px;
+      }
+
+      .hero-content {
+        gap: 16px;
+      }
+
+      .hero-text {
+        width: min(100%, calc(100vw - 32px));
+      }
+
+      .hero-photo {
+        width: 136px;
+        height: 136px;
+      }
+
+      .hero-summary {
+        gap: 6px;
+      }
+
+      .hero-summary h1 {
+        font-size: clamp(32px, 8vw, 42px);
+        line-height: 1.05;
+        overflow-wrap: normal;
+      }
+
+      .hero-summary h1 span {
+        display: block;
+      }
+
+      .hero-summary-role {
+        font-size: 18px;
+      }
+
+      .hero-summary-tools,
+      .hero-summary-status {
+        font-size: clamp(13px, 3.3vw, 14px);
+      }
+
+      .terminal {
+        width: 100%;
+        max-width: calc(100vw - 32px);
+        margin-top: 8px;
+      }
+
+      .terminal-bar {
+        padding: 12px 16px;
+      }
+
+      .terminal-body {
+        padding: 16px;
+        font-size: clamp(13px, 3.25vw, 14px);
+        overflow-x: hidden;
+      }
+
+      .query-line {
+        overflow-x: auto;
+        max-width: 100%;
+        padding-bottom: 8px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        scrollbar-width: none;
+      }
+
+      .query-line::-webkit-scrollbar {
+        display: none;
+      }
+
+      .result-wrap {
+        margin-top: 16px;
+      }
+
+      .result-table thead {
+        display: none;
+      }
+
+      .result-table,
+      .result-table tbody,
+      .result-table tr,
+      .result-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .result-table tr {
+        margin-bottom: 8px;
+      }
+
+      .result-table td {
+        position: relative;
+        min-height: 38px;
+        padding: 8px 0 8px 36%;
+        text-align: left;
+        border-bottom: 1px solid var(--code-border);
+        font-size: clamp(13px, 3.25vw, 14px);
+      }
+
+      .result-table td:last-child {
+        border-bottom: none;
+      }
+
+      .result-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 30%;
+        color: var(--code-muted);
+        font-weight: 500;
+      }
+
+      .hero-links {
+        width: 100%;
+        margin-top: 16px;
+        gap: 12px;
+      }
+
+      .btn-contact-hero,
+      .btn-resume {
+        min-height: 48px;
+        justify-content: center;
+      }
+
+      .btn-contact-hero {
+        padding: 12px 18px;
+      }
+
+      .btn-resume {
+        margin-top: 12px;
+        padding: 14px 24px;
+      }
+
+      .about-text,
+      .contact-panel p {
+        font-size: 16px;
+      }
+
+      .schema-head {
+        padding: 12px 16px;
+      }
+
+      .chip-row {
+        gap: 8px;
+        padding: 16px;
+      }
+
+      .chip {
+        min-width: max-content;
+        padding: 8px 12px;
+      }
+
+      .project-card {
+        margin-bottom: 24px;
+      }
+
+      .project-head {
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px;
+      }
+
+      .project-head h3 {
+        width: 100%;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      .project-stack {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .repo-link {
+        min-height: 44px;
+        padding: 10px 14px;
+      }
+
+      .project-body {
+        padding: 16px;
+      }
+
+      .project-body li,
+      .exp-body li {
+        margin-bottom: 12px;
+        padding-left: 20px;
+        font-size: 15.5px;
+        line-height: 1.7;
+      }
+
+      .project-skills,
+      .exp-footer {
+        padding: 14px 16px 18px;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .cert-table,
+      .cert-table tbody,
+      .cert-table tr,
+      .cert-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .cert-table {
+        border: none;
+        background: transparent;
+      }
+
+      .cert-table thead {
+        display: none;
+      }
+
+      .cert-table tr {
+        margin-bottom: 16px;
+        border: 1px solid var(--grid);
+        border-radius: var(--radius);
+        background: var(--panel);
+        overflow: hidden;
+      }
+
+      .cert-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--grid);
+        font-size: 14.5px;
+      }
+
+      .cert-table td:last-child {
+        border-bottom: none;
+      }
+
+      .cert-name::before,
+      .cert-issuer::before,
+      .cert-tags::before {
+        display: block;
+        margin-bottom: 4px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--teal);
+      }
+
+      .cert-name::before {
+        content: "Certification";
+      }
+
+      .cert-issuer::before {
+        content: "Issuer";
+      }
+
+      .cert-tags::before {
+        content: "Focus Areas";
+      }
+
+      .cert-table .cert-issuer {
+        margin-top: 12px;
+      }
+
+      .cert-link {
+        min-height: 48px;
+        width: 100%;
+        justify-content: center;
+        padding: 12px 14px;
+        font-size: 12px;
+      }
+
+      .exp-head {
+        gap: 12px;
+        padding: 16px;
+      }
+
+      .exp-head-left {
+        width: 100%;
+      }
+
+      .exp-head-left h3 {
+        font-size: 20px;
+      }
+
+      .exp-company {
+        margin-top: 6px;
+        line-height: 1.55;
+      }
+
+      .exp-badge {
+        min-height: 32px;
+      }
+
+      .exp-body {
+        padding: 16px;
+      }
+
+      .contact-panel {
+        padding: 24px 16px;
+      }
+
+      .connect-list {
+        max-width: none;
+        gap: 12px;
+      }
+
+      .connect-row {
+        min-height: 56px;
+        padding: 14px 16px;
+      }
+
+      footer {
+        padding: 24px 16px 32px;
+        line-height: 1.7;
+      }
+    }
+
+    /* 425px: phone layout with full-width primary actions */
+    @media (max-width: 425px) {
+      section {
+        padding: 40px 16px;
+      }
+
+      .hero {
+        padding-top: 24px;
+        padding-bottom: 32px;
+      }
+
+      .hero-photo {
+        width: 128px;
+        height: 128px;
+      }
+
+      .hero-links {
+        flex-direction: column;
+      }
+
+      .btn-contact-hero,
+      .btn-resume {
+        width: 100%;
+      }
+
+      .terminal-body {
+        padding: 16px 14px;
+      }
+
+      .project-head,
+      .project-body,
+      .schema-head,
+      .chip-row,
+      .exp-head,
+      .exp-body {
+        padding-inline: 16px;
+      }
+
+      .repo-link {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .connect-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+
+    /* 375px: compact phone tightening without reducing touch targets */
+    @media (max-width: 375px) {
+      .explorer {
+        padding-inline: 12px;
+      }
+
+      .db-tree {
+        scroll-padding-inline: 12px;
+      }
+
+      section {
+        padding-inline: 12px;
+      }
+
+      .hero-photo {
+        width: 124px;
+        height: 124px;
+      }
+
+      .result-table td {
+        padding-left: 0;
+      }
+
+      .result-table td::before {
+        position: static;
+        display: block;
+        width: auto;
+        margin-bottom: 2px;
+      }
+
+      .contact-panel {
+        padding-inline: 14px;
+      }
+
+      .connect-row .v {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    /* 320px: smallest supported viewport polish */
+    @media (max-width: 320px) {
+      .explorer-title {
+        font-size: 9.5px;
+      }
+
+      .db-tree a {
+        min-height: 38px;
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+
+      section {
+        padding-block: 32px;
+      }
+
+      .hero-photo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .terminal-title {
+        font-size: 11px;
+      }
+
+      .terminal-body {
+        padding: 12px;
+      }
+
+      .project-head h3,
+      .exp-head-left h3 {
+        font-size: 18px;
+      }
+
+      .chip {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Loading Animation -->
-    <div class="loader-wrapper">
-        <div class="loader"></div>
-    </div>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-container">
-            <a href="#home" class="logo">FK</a>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Programming Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
-            </ul>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+  <div class="shell">
+    <!-- Schema explorer sidebar -->
+    <nav class="explorer" aria-label="Section navigation">
+      <div class="explorer-header">
+        <div class="explorer-title">portfolio_db</div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode"
+          aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+        </button>
+      </div>
+      <ul class="db-tree">
+        <li><a href="#about"><span class="tbl-icon"></span>about</a></li>
+        <li><a href="#skills"><span class="tbl-icon"></span>skills</a></li>
+        
+        <li><a href="#projects"><span class="tbl-icon"></span>projects</a></li>
+        <li><a href="#certifications"><span class="tbl-icon"></span>certifications</a></li>
+        <li><a href="#education"><span class="tbl-icon"></span>education</a></li>
+        <li><a href="#contact"><span class="tbl-icon"></span>contact</a></li>
+      </ul>
+      <div class="explorer-foot">
+        connected as<br><span style="color:var(--ink)">faheem_k</span>
+      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home">
-        <div class="hero-content fade-in">
-            <h1>Hi, I'm <span>Faheem K</span></h1>
-            <div class="typing-text" id="typingText">
-                <span id="typedText"></span>
-                <span class="typing-cursor"></span>
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="hero-content">
+          <div class="hero-image-wrap">
+            <img src="profile.png" alt="Faheem K" class="hero-photo">
+          </div>
+          <div class="hero-summary" aria-label="Profile summary">
+            <h1><span>Faheem</span> <span>K</span></h1>
+            <div class="hero-summary-role">Software Engineer</div>
+            <div class="hero-summary-tools">Python &bull; C &bull; Django &bull; REST API &bull; PostgreSQL</div>
+            <div class="hero-summary-status">Open to Work</div>
+          </div>
+          <div class="hero-text">
+            <div class="terminal">
+              <div class="terminal-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="terminal-title">developer.sql</span>
+              </div>
+              <div class="terminal-body">
+                <div class="query-line" id="queryLine"></div>
+                <div class="result-wrap" id="resultWrap">
+                  <div class="result-meta">1 row returned</div>
+                  <table class="result-table">
+                    <thead>
+                      <tr>
+                        <th>name</th>
+                        <th>role</th>
+                        <th>location</th>
+                        <th>status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="name">Faheem K</td>
+                        <td data-label="role">Software Engineer</td>
+                        <td data-label="location">Kerala, India</td>
+                        <td data-label="status"><span class="status-pill">open to work</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-            <p>Building a career in the IT field through continuous learning and hands-on development. Passionate about
-                creating innovative solutions and exploring new technologies.</p>
-            <div class="cta-buttons">
-                <a href="#skills" class="btn btn-primary">View Skills</a>
-                <a href="https://drive.google.com/file/d/1ylQ55lQBZVeTBbM5JXybjf17wz1a9fWe/view?usp=sharing"
-                    class="btn btn-secondary" target="_blank">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <div class="hero-links">
+              <a class="btn-contact-hero" href="#contact">📬 Contact Me</a>
             </div>
-
-            <!-- Social Media Links -->
-            <div class="hero-social-links">
-                <a href="https://github.com/Faheemkanniyan" class="hero-social-link" target="_blank"
-                    aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/faheem-k-a83a14317" class="hero-social-link" target="_blank"
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://instagram.com/faheeeeee.m" class="hero-social-link" target="_blank"
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
+            <a id="btn-download-resume" class="btn-resume" href="https://drive.google.com/file/d/1ylQ55lQBZVeTBbM5JXybjf17wz1a9fWe/view?usp=sharing" download="Faheem_K_https://drive.google.com/file/d/1ylQ55lQBZVeTBbM5JXybjf17wz1a9fWe/view?usp=sharing">
+              <span class="resume-icon">⬇</span> Download Resume
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <h2 class="section-title fade-in">About Me</h2>
-        <div class="about-content fade-in">
-            <p>
-                I am <strong>Faheem K</strong>, a 22-year-old MCA student and aspiring IT professional. I completed my
-                B.Sc. in Computer Science from Calicut University in 2025. Currently, I am pursuing my MCA at APJ Abdul
-                Kalam Technological University, St. Joseph's Engineering College, Palai.
-            </p>
-            <p>
-                I am passionate about technology and inspired to build a strong career in the IT field through
-                continuous learning and hands-on development. My journey in computer science has equipped me with a
-                solid foundation in programming, databases, and software development principles.
-            </p>
+      <!-- ABOUT -->
+      <section id="about" class="reveal">
+        <div class="eyebrow">about</div>
+        <h2 class="section-title">Summary</h2>
+        <p class="about-text">
+          I am <strong>Faheem K</strong>, an MCA student and aspiring Software Engineer passionate about building intelligent, scalable, and impactful applications. With a strong foundation in computer science and hands-on experience in modern web development and AI-driven solutions, I enjoy solving complex problems through clean code and innovative technologies.
+        </p>
+        <p class="about-text" style="margin-top: 14px;">
+          My expertise spans <strong>Python, Django, REST APIs, and full-stack web development</strong>. I thrive in dynamic environments where I can leverage my technical skills to optimize workflows, enhance user experiences, and contribute to cutting-edge projects. I am actively seeking entry-level Software Engineer opportunities where I can grow, collaborate, and make a real-world impact.
+        </p>
+</section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="reveal">
+        <div class="eyebrow">skills</div>
+        <h2 class="section-title">Skill Set</h2>
+
+        <div class="schema-block">
+          <div class="schema-head"><span class="name">Backend & AI</span><span class="count">4 items</span></div>
+          <div class="chip-row">
+            <span class="chip">Python</span>
+            <span class="chip">C</span>
+            <span class="chip">Django</span>
+            <span class="chip">REST API</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <h2 class="section-title fade-in">Education</h2>
+        <div class="schema-block">
+          <div class="schema-head"><span class="name">Frontend</span><span class="count">3 items</span></div>
+          <div class="chip-row">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="schema-block">
+          <div class="schema-head"><span class="name">Databases</span><span class="count">2 items</span></div>
+          <div class="chip-row">
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MySQL</span>
+          </div>
+        </div>
+
+        <div class="schema-block">
+          <div class="schema-head"><span class="name">Version Control</span><span class="count">2 items</span></div>
+          <div class="chip-row">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+          </div>
+        </div>
+</section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="reveal">
+
+</section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="reveal">
+        <div class="eyebrow">projects</div>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-card">
+          <div class="project-head">
+            <h3>AI Public Speaking Coach</h3>
+            <span class="project-stack">Python · Django · AI · NLP</span>
+          </div>
+          <div style="padding:14px 20px 0;">
+            <a class="repo-link" href="https://github.com/Faheemkanniyan/AI_Public_Speaking_Coach" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+              View repo
+            </a>
+          </div>
+          <div class="project-body">
+            <ul>
+              <li>Developed an AI-powered platform using Python and Django for speech practice, analysis, and personalized feedback.</li>
+              <li>Implemented speech error detection, improvement suggestions, personalized practice schedules, and progress tracking.</li>
+              <li>Leveraged Natural Language Processing (NLP) models to analyze speech patterns, pacing, filler words, and vocabulary usage in real-time.</li>
+              <li>Designed an intuitive dashboard for users to monitor their improvement over time with detailed analytics and graphical insights.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head">
+            <h3>Tech Connect Hub</h3>
+            <span class="project-stack">HTML · CSS · JavaScript · Node.js · MongoDB</span>
+          </div>
+          <div style="padding:14px 20px 0;">
+            <a class="repo-link" href="https://github.com/Faheemkanniyan/Tech-connect-hub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+              View repo
+            </a>
+          </div>
+          <div class="project-body">
+            <ul>
+              <li>Designed a responsive technology resource platform using HTML, CSS, JavaScript, and Node.js with category-based organization for easy discovery.</li>
+              <li>Integrated MongoDB for efficient resource storage and retrieval, with Git and GitHub for version control.</li>
+              <li>Built robust search and filtering functionalities, allowing users to rapidly find specific tools, articles, and documentation.</li>
+              <li>Implemented a secure user authentication system to enable personalized resource bookmarking and contribution features.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head">
+            <h3>OpenEnv Code Review Agent</h3>
+            <span class="project-stack">Python · Grok API · Docker</span>
+          </div>
+          <div style="padding:14px 20px 0;">
+            <a class="repo-link" href="https://github.com/Faheemkanniyan/openenv-code-review-agent" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+              View repo
+            </a>
+          </div>
+          <div class="project-body">
+            <ul>
+              <li>Built an AI-powered code review agent using Python and Grok API to detect bugs and provide improvement suggestions across multiple programming languages.</li>
+              <li>Developed a user-friendly code analysis interface and containerized the application with Docker for consistent execution.</li>
+              <li>Automated static code analysis to enforce best practices, security standards, and code maintainability guidelines.</li>
+              <li>Designed the agent architecture to seamlessly integrate into CI/CD pipelines to provide instant feedback on code commits.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-head">
+            <h3>Offline Multilingual Speech Translation & Threat Detection</h3>
+            <span class="project-stack">Python · Django · Vosk</span>
+          </div>
+          <div style="padding:14px 20px 0;">
+            <a class="repo-link" href="https://github.com/Faheemkanniyan/offline-speech-translation-threat-detection" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+              View repo
+            </a>
+          </div>
+          <div class="project-body">
+            <ul>
+              <li>Developed an offline speech translation and threat detection system using Python, Django, and Vosk.</li>
+              <li>Implemented multilingual speech recognition, translation, and threat classification.</li>
+              <li>Optimized the Vosk speech recognition engine to run efficiently in fully offline environments, ensuring maximum data privacy.</li>
+              <li>Designed a real-time threat detection algorithm that flags aggressive or suspicious keywords to immediately alert authorities.</li>
+            </ul>
+          </div>
+        </div>
+</section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" class="reveal">
+        <div class="eyebrow">certifications</div>
+        <h2 class="section-title">Certifications</h2>
+        <table class="cert-table">
+          <thead>
+            <tr>
+              <th>Certification</th>
+              <th>Focus areas</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="cert-name">Machine Learning for Engineering and Science Applications</div>
+                <div class="cert-issuer">NPTEL, IIT Madras</div>
+              </td>
+              <td class="cert-tags">Machine Learning · Deep Learning · Data-driven Problem Solving</td>
+              <td>
+                <a class="cert-link" href="https://www.linkedin.com/in/faheem-k26/overlay/Certifications/1882881574/treasury/?profileId=ACoAAFBrGgMBfy_DuDCY2Iyy0e-Nk3dUIf1SWd8" target="_blank" rel="noopener">
+                  View Certificate ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cert-name">Blockchain Specialization</div>
+                <div class="cert-issuer">University of California, Irvine (Coursera)</div>
+              </td>
+              <td class="cert-tags">Blockchain Fundamentals · Cryptography · Smart Contracts · DApps</td>
+              <td>
+                <a class="cert-link" href="https://www.linkedin.com/in/faheem-k26/overlay/Certifications/1252880723/treasury/?profileId=ACoAAFBrGgMBfy_DuDCY2Iyy0e-Nk3dUIf1SWd8" target="_blank" rel="noopener">
+                  View Certificate ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cert-name">NASA Space Apps Challenge 2025</div>
+                <div class="cert-issuer">NASA</div>
+              </td>
+              <td class="cert-tags">Global Hackathon · Earth Observation Data · Innovative Problem Solving</td>
+              <td>
+                <a class="cert-link" href="https://www.linkedin.com/in/faheem-k26/overlay/Certifications/1144311308/treasury/?profileId=ACoAAFBrGgMBfy_DuDCY2Iyy0e-Nk3dUIf1SWd8" target="_blank" rel="noopener">
+                  View Certificate ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cert-name">Incepta Hackathon</div>
+                <div class="cert-issuer">Incepta</div>
+              </td>
+              <td class="cert-tags">Hackathon · Collaborative Development · Rapid Prototyping</td>
+              <td>
+                <a class="cert-link" href="https://www.linkedin.com/in/faheem-k26/overlay/Certifications/1466488349/treasury/?profileId=ACoAAFBrGgMBfy_DuDCY2Iyy0e-Nk3dUIf1SWd8" target="_blank" rel="noopener">
+                  View Certificate ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cert-name">Big Data Foundations and Analytics</div>
+                <div class="cert-issuer">Dept. of Computer Science and Engineering, SJCET Palai</div>
+              </td>
+              <td class="cert-tags">Big Data Frameworks · Data Analytics Lifecycle · Scalable Data Management</td>
+              <td>
+                <a class="cert-link" href="https://www.linkedin.com/in/faheem-k26/overlay/Certifications/1883883620/treasury/?profileId=ACoAAFBrGgMBfy_DuDCY2Iyy0e-Nk3dUIf1SWd8" target="_blank" rel="noopener">
+                  View Certificate ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cert-name">Web Designing</div>
+                <div class="cert-issuer">Talim Educational Platform</div>
+              </td>
+              <td class="cert-tags">UI/UX Principles · Responsive Design · HTML/CSS/JavaScript</td>
+              <td>
+                <a class="cert-link" href="https://www.linkedin.com/in/faheem-k26/overlay/Position/2731561468/treasury/?profileId=ACoAAFBrGgMBfy_DuDCY2Iyy0e-Nk3dUIf1SWd8" target="_blank" rel="noopener">
+                  View Certificate ↗
+                </a>
+              </td>
+            </tr>
+          </tbody>
+</table>
+</section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="reveal">
+        <div class="eyebrow">education</div>
+        <h2 class="section-title">Education</h2>
         <div class="timeline">
-            <div class="timeline-item fade-in">
-                <div class="timeline-content">
-                    <h3><i class="fas fa-graduation-cap"></i> Master of Computer Applications (MCA)</h3>
-                    <h4>APJ Abdul Kalam Technological University</h4>
-                    <p>St. Joseph's Engineering College, Palai</p>
-                    <span class="timeline-date">Currently Pursuing</span>
-                </div>
-            </div>
-            <div class="timeline-item fade-in">
-                <div class="timeline-content">
-                    <h3><i class="fas fa-graduation-cap"></i> Bachelor of Science in Computer Science</h3>
-                    <h4>Calicut University</h4>
-                    <p>Sri C Achutha Menon Government College, Thrissur</p>
-                    <span class="timeline-date">2025</span>
-                </div>
-            </div>
+          <div class="tl-item">
+            <div class="tl-year">Currently Pursuing</div>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <div class="tl-place">St. Joseph's Engineering College, Palai (APJ Abdul Kalam Technological University)</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2025</div>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <div class="tl-place">Sri C Achutha Menon Government College, Thrissur (Calicut University)</div>
+          </div>
         </div>
-    </section>
+</section>
 
-    <!-- Programming Skills Section -->
-    <section id="skills">
-        <h2 class="section-title fade-in">Programming Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item fade-in" data-skill="85">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fab fa-python"></i></span>
-                    <span class="skill-name">Python</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 85%"></div>
-                </div>
-                <div class="skill-percentage">85%</div>
-            </div>
 
-            <div class="skill-item fade-in" data-skill="80">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fab fa-java"></i></span>
-                    <span class="skill-name">Java</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 80%"></div>
-                </div>
-                <div class="skill-percentage">80%</div>
-            </div>
 
-            <div class="skill-item fade-in" data-skill="75">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fas fa-code"></i></span>
-                    <span class="skill-name">C</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 75%"></div>
-                </div>
-                <div class="skill-percentage">75%</div>
-            </div>
-
-            <div class="skill-item fade-in" data-skill="90">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fab fa-html5"></i></span>
-                    <span class="skill-name">HTML</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 90%"></div>
-                </div>
-                <div class="skill-percentage">90%</div>
-            </div>
-
-            <div class="skill-item fade-in" data-skill="85">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fab fa-css3-alt"></i></span>
-                    <span class="skill-name">CSS</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 85%"></div>
-                </div>
-                <div class="skill-percentage">85%</div>
-            </div>
-
-            <div class="skill-item fade-in" data-skill="80">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fab fa-js"></i></span>
-                    <span class="skill-name">JavaScript</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 80%"></div>
-                </div>
-                <div class="skill-percentage">80%</div>
-            </div>
-
-            <div class="skill-item fade-in" data-skill="85">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fab fa-git-alt"></i></span>
-                    <span class="skill-name">Git</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 85%"></div>
-                </div>
-                <div class="skill-percentage">85%</div>
-            </div>
-
-            <div class="skill-item fade-in" data-skill="85">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fab fa-github"></i></span>
-                    <span class="skill-name">GitHub</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 85%"></div>
-                </div>
-                <div class="skill-percentage">85%</div>
-            </div>
-
-            <div class="skill-item fade-in" data-skill="75">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fas fa-database"></i></span>
-                    <span class="skill-name">PostgreSQL</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 75%"></div>
-                </div>
-                <div class="skill-percentage">75%</div>
-            </div>
-
-            <div class="skill-item fade-in" data-skill="80">
-                <div class="skill-header">
-                    <span class="skill-icon"><i class="fas fa-database"></i></span>
-                    <span class="skill-name">MySQL</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="--skill-width: 80%"></div>
-                </div>
-                <div class="skill-percentage">80%</div>
-            </div>
+      <!-- CONTACT -->
+      <section id="contact" class="reveal">
+        <div class="contact-panel">
+          <div class="eyebrow">contact</div>
+          <h2>Let's connect</h2>
+          <p>Open to data analyst internships and entry-level roles. Reach out through any of the channels below.</p>
+          <div class="connect-list">
+            <a class="connect-row" href="https://mail.google.com/mail/?view=cm&fs=1&to=faheemkanniyan26@gmail.com"
+              target="_blank" rel="noopener">
+              <span class="k">email</span><span class="v">faheemkanniyan26@gmail.com</span>
+            </a>
+            <a class="connect-row" href="tel:+917356453992">
+              <span class="k">phone</span><span class="v">+91 8943358991</span>
+            </a>
+            <a class="connect-row" href="https://www.linkedin.com/in/faheem-k26/" target="_blank" rel="noopener">
+              <span class="k">linkedin</span><span class="v">/in/faheem-k26</span>
+            </a>
+            <a class="connect-row" href="https://github.com/Faheemkanniyan" target="_blank" rel="noopener">
+              <span class="k">github</span><span class="v">/Faheemkanniyan</span>
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title fade-in">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-content">
-                    <h3>Portfolio Website</h3>
-                    <p>A modern, responsive personal portfolio website showcasing my skills, education, and projects
-                        with smooth animations and dark mode support.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <a href="https://github.com/Faheemkanniyan" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
+      <footer>
+        <span style="color:var(--teal); font-family:'JetBrains Mono',monospace;">COMMIT</span>
+        &nbsp;&mdash;&nbsp;
+        <span style="font-style:italic;">"Turning raw rows into real stories, one query at a time."</span>
+        <div class="footer-copy">&copy; 2026 Faheem K</div>
+      </footer>
+    </main>
+  </div>
 
-            <div class="project-card fade-in">
-                <div class="project-content">
-                    <h3>Database Management System</h3>
-                    <p>Developed a comprehensive database management system using MySQL for efficient data storage and
-                        retrieval operations.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SQL</span>
-                    </div>
-                    <a href="https://github.com/Faheemkanniyan" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
+  <script>
+    // Light/dark mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-            <div class="project-card fade-in">
-                <div class="project-content">
-                    <h3>Web Application Development</h3>
-                    <p>Created dynamic web applications using modern web technologies with focus on user experience and
-                        responsive design.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">Git</span>
-                    </div>
-                    <a href="https://github.com/Faheemkanniyan" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
+    function applyTheme(theme, shouldSave = true) {
+      document.documentElement.dataset.theme = theme;
+      themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
 
-            <div class="project-card fade-in">
-                <div class="project-content">
-                    <h3>Python Automation Scripts</h3>
-                    <p>Built various automation scripts using Python to streamline repetitive tasks and improve workflow
-                        efficiency.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Automation</span>
-                        <span class="tech-tag">Scripting</span>
-                    </div>
-                    <a href="https://github.com/Faheemkanniyan" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+      if (shouldSave) {
+        try {
+          localStorage.setItem('portfolio-theme', theme);
+        } catch (error) {
+          // Theme still applies for this visit when storage is unavailable.
+        }
+      }
+    }
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title fade-in">Contact</h2>
-        <div class="contact-container">
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form fade-in" id="contactForm">
-                <!-- Web3Forms Access Key -->
-                <input type="hidden" name="access_key" value="8425bf75-177d-454b-be03-911afff579ca">
-                <input type="hidden" name="subject" value="New Contact from Portfolio Website">
-                <input type="hidden" name="from_name" value="Portfolio Contact Form">
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+    });
 
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <span class="error-message">Please enter your name</span>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                    <span class="error-message">Please enter a valid email</span>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Your message..." required></textarea>
-                    <span class="error-message">Please enter a message</span>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i> Send Message
-                </button>
-            </form>
+    themeQuery.addEventListener('change', (event) => {
+      try {
+        if (!localStorage.getItem('portfolio-theme')) {
+          applyTheme(event.matches ? 'dark' : 'light', false);
+        }
+      } catch (error) {
+        applyTheme(event.matches ? 'dark' : 'light', false);
+      }
+    });
 
-            <div class="contact-info fade-in">
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Email</h3>
-                        <a href="mailto:faheemkanniyan26@gmail.com">faheemkanniyan26@gmail.com</a>
-                    </div>
-                </div>
+    applyTheme(document.documentElement.dataset.theme || 'light', false);
 
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Phone</h3>
-                        <a href="tel:+918943358991">+91 8943358991</a>
-                    </div>
-                </div>
+    // Typing effect for hero query
+    const queryText = "SELECT * FROM developers WHERE name = 'Faheem K';";
+    const queryEl = document.getElementById('queryLine');
+    const resultEl = document.getElementById('resultWrap');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-share-alt"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Social Media</h3>
-                        <div class="social-links">
-                            <a href="https://github.com/Faheemkanniyan" class="social-link" target="_blank"
-                                aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/faheem-k-a83a14317" class="social-link" target="_blank"
-                                aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    function highlight(raw) {
+      return raw
+        .replace(/\b(SELECT|FROM|WHERE)\b/g, '<span class="kw">$1</span>')
+        .replace(/('[^']*')/g, '<span class="str">$1</span>');
+    }
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Faheem K. All rights reserved.</p>
-        <p class="footer-tagline">Designed with passion for technology and learning</p>
-    </footer>
+    if (prefersReduced) {
+      queryEl.innerHTML = highlight(queryText);
+      resultEl.classList.add('show');
+    } else {
+      let i = 0;
+      function type() {
+        if (i <= queryText.length) {
+          const partial = queryText.slice(0, i);
+          queryEl.innerHTML = highlight(partial) + '<span class="cursor"></span>';
+          i++;
+          setTimeout(type, 26);
+        } else {
+          queryEl.innerHTML = highlight(queryText);
+          setTimeout(() => resultEl.classList.add('show'), 200);
+        }
+      }
+      setTimeout(type, 400);
+    }
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    // Active nav link on scroll
+    const navLinks = document.querySelectorAll('.db-tree a');
+    const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href')));
+    let lastActiveHref = '';
+
+    function setActive() {
+      let current = sections[0];
+      const scrollPos = window.scrollY + 120;
+      sections.forEach(sec => { if (sec && sec.offsetTop <= scrollPos) current = sec; });
+      const currentHref = '#' + current.id;
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === currentHref);
+      });
+
+      if (currentHref !== lastActiveHref) {
+        const activeLink = document.querySelector(`.db-tree a[href="${currentHref}"]`);
+        if (activeLink && window.matchMedia('(max-width: 768px)').matches) {
+          activeLink.scrollIntoView({
+            behavior: prefersReduced ? 'auto' : 'smooth',
+            block: 'nearest',
+            inline: 'center'
+          });
+        }
+        lastActiveHref = currentHref;
+      }
+    }
+    window.addEventListener('scroll', setActive);
+    setActive();
+  </script>
+
 </body>
 
 </html>
